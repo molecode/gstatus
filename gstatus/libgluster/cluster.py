@@ -712,7 +712,7 @@ class Cluster(object):
             # print a progress message
             sys.stdout.write("Processing gluster client connections" + " " * 20 + "\n\r\x1b[A")
 
-        cmd = GlusterCommand("gluster vol status all clients --xml",
+        cmd = GlusterCommand("gluster vol status all --xml",
                              timeout=cfg.CMD_TIMEOUT)
         cmd.run()
 
